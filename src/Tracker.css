@@ -16,7 +16,18 @@
 }
 
 * {
+
   box-sizing: border-box;
+}
+
+.AppLight {
+  background-color: #fff;
+  height: 100%;
+}
+
+.AppDark{
+  background-color: black;
+  height: 100%;
 }
 
 body {
@@ -35,6 +46,8 @@ body {
     padding: 0.5rem 0;
     transition: background-color 0.2s ease;
 }
+
+
 
 .Header-dark {
   text-align: center;
@@ -160,6 +173,21 @@ input[type='number'] , .dark-input {
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
+}
+
+.edit-btn{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn-dark{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #f7f7f7;
 }
 
 .btn:hover{

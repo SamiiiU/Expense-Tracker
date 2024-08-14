@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Tracker from './Tracker';
-import {TemeProvider} from '../src/context/'
+import {GlobalProvider} from '../src/context/GlobalState';  
 
-ReactDom.render(<Tracker />
-    
-    
-    , document.getElementById('root'));
+const root = ReactDom.createRoot(document.getElementById('root'));
+
+root.render(
+    <React.StrictMode>
+        <GlobalProvider>
+        <Tracker />
+        </GlobalProvider>
+    </React.StrictMode>
+)

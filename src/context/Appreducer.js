@@ -16,6 +16,15 @@ export  default (state , action) => {
                 transactions : [action.payload , ...state.transactions],
             }
 
+        
+
+        case 'UPDATE' :
+
+            state.transactions[action.index] = action.payload
+            return{
+                ...state,
+            }
+
         default :
             return state;
     }

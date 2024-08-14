@@ -1,24 +1,20 @@
-import React  from "react";
-
+import React , {useContext} from "react";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
 import IncomeExp from "./components/Income-Exp";
 import TransactionLi from "./components/TransactionLi";
 import Add from "./components/Add";
-import {GlobalProvider} from '../src/context/GlobalState';
-
-
-
+import { ThemeContext } from '../src/context/GlobalState';
 
 
 import './Tracker.css';
 
 const Tracker = () => {
-    
+    const {isDarkMode} = useContext(ThemeContext);
 
     return(
-        <div > 
-        <GlobalProvider >
+
+        <div className={(isDarkMode ? 'AppDark' : 'AppLight'  )}>
             
             <Header />
             <div className="container">    
@@ -30,12 +26,9 @@ const Tracker = () => {
                 <Add />
                 
             </div>
-            
-
-
-        </GlobalProvider>
 
         </div>
+
     );
 }
 
