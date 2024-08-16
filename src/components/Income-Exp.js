@@ -5,10 +5,10 @@ import { ThemeContext } from '../context/GlobalState';
 
 
 const IncomeExp = () => {
-  const {transaction} = useContext(GlobalContext);
+  const {transactions} = useContext(GlobalContext);
   const { isDarkMode } = useContext(ThemeContext); 
 
-  const amount = transaction.map(transactions => transactions.amount);
+  const amount = transactions.map(transactions => transactions.amount);
 
   
 
